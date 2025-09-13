@@ -1,4 +1,4 @@
-# Pydantic AI Stash
+# Pydantic AI Stash (prerelease)
 
 Efficient serialization and storage for Pydantic AI conversations with binary content.
 
@@ -6,9 +6,11 @@ Efficient serialization and storage for Pydantic AI conversations with binary co
 
 Pydantic AI Stash provides a clean, maintainable library for handling binary content within Pydantic AI message structures. It enables efficient storage and retrieval of binary data (images, audio, documents, etc.) while preserving metadata and ensuring round-trip fidelity.
 
+Currently, we just have a simplistic file store adapter wired up. An adapter is designed specifically to hold your custom business logic (deduping, expiration times, db, s3, id, etc.)
+
 ## Key Features
 
-- **Content-based Deduplication**: Uses SHA256 hashes to avoid storing identical binary content multiple times
+- **Flexible Adapter Layer**: A basic adapter class handles the identification, stashing, and loading of content types. Plug in your DB, S3, etc. tools here. 
 - **Type Safety**: Full type hints and compatibility with Pydantic AI message formats
 - **Metadata Preservation**: Maintains all original BinaryContent metadata during stash/load cycles
 - **Nested Content Support**: Handles BinaryContent in nested message part content lists
