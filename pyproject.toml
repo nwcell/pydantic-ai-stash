@@ -9,7 +9,7 @@ description = "Efficient serialization and storage for Pydantic AI conversations
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
-    { name = "Story Sprout Team" },
+    { name = "Travis Krause" },
 ]
 keywords = ["pydantic-ai", "serialization", "ai", "conversation", "binary-content"]
 classifiers = [
